@@ -1,0 +1,11 @@
+{
+  "name": "http-sever",
+  "version": "1.0.0",
+  "description": "My http sever application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashish",
+  "license": "ISC"
+}
