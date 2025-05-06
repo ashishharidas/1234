@@ -1,0 +1,23 @@
+{
+  "name": "todo-cli",
+  "version": "1.0.0",
+  "description": "\"my code\"",
+  "main": "assert.js",
+  "scripts": {
+    "test": "jest",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "nothing"
+  ],
+  "author": "ash",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "eslint": "^9.25.1",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3"
+  }
+}
