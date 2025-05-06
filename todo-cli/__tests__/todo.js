@@ -22,7 +22,7 @@ describe("Todolist Test Suite", () => {
       dueDate: new Date().toISOString().slice(0, 10),
     });
   });
-  test("Creating a new todo", () => {
+  test("add a  todo", () => {
     const todoItemCount = all.length;
 
     add({
@@ -32,12 +32,13 @@ describe("Todolist Test Suite", () => {
     });
     expect(all.length).toBe(todoItemCount + 1);
   });
-  test("Should mark todo as complete", () => {
+  
+  test(" mark todo as complete", () => {
     expect(all[0].completed).toBe(false);
     markAsComplete(0);
     expect(all[0].completed).toBe(true);
   });
-  test("Retrieval of overdue items", () => {
+  test("Retrieve overdue items", () => {
     const overdueItems = all.filter(
       (todo) =>
         new Date(todo.dueDate) < new Date("2025-05-03") && !todo.completed,
@@ -45,7 +46,7 @@ describe("Todolist Test Suite", () => {
     expect(overdueItems.length).toBe(0); // Adjusted to match the expected state of the 'all' array
   });
 
-  test("Retrieval of due today items", () => {
+  test("Retrieve due today items", () => {
     const dueTodayItems = all.filter(
       (todo) =>
         todo.dueDate === new Date().toISOString().slice(0, 10) &&
@@ -54,7 +55,7 @@ describe("Todolist Test Suite", () => {
     expect(dueTodayItems.length).toBe(1); // Adjusted to match the expected state of the 'all' array
   });
 
-  test("Retrieval of due later items", () => {
+  test("Retrieve due later items", () => {
     const dueLaterItems = all.filter(
       (todo) => new Date(todo.dueDate) > new Date() && !todo.completed,
     );
